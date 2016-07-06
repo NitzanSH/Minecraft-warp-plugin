@@ -19,3 +19,11 @@ commands:
     description: Returns all the available warps.
     usage: /warps
     aliases: [warps]
+
+permissions:
+  warps.set:
+    description: Allows acces to /setwarp.
+    default: op
+    warps.delete:
+      description: Allows acces to /setwarp.
+      default: op

@@ -36,7 +36,15 @@ public class Test extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
         if(sender instanceof Player) {
             player = (Player) sender;
+
             if (label.equals("setwarp")) {
+
+                if(!sender.hasPermission("warps.set")) {
+
+                    sender.sendMessage(ChatColor.RED + "You do not have permission to access this command.");
+                    return true;
+                }
+
                 if(!config.getBoolean(args[0])) {
                     location = player.getLocation();
                     spot = args[0];
@@ -82,6 +90,12 @@ public class Test extends JavaPlugin {
 
             else if(label.equals("delwarp"))
             {
+                if(!sender.hasPermission("warps.delete")) {
+
+                    sender.sendMessage(ChatColor.RED + "You do not have permission to access this command.");
+                    return true;
+                }
+
                 if(config.getBoolean(args[0]))
                 {
                     player.sendMessage(ChatColor.GREEN + "The " + args[0] +" warp had been deleted.");

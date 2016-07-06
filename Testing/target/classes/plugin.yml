@@ -1,0 +1,21 @@
+name: Warp
+main: me.NitzanShwartz.first.Test
+version: 1.4.1
+author: Nitzan Shwartz
+commands:
+  setwarp:
+    description: Sets warps.
+    usage: /setwarp
+    aliases: [setwarp, sw]
+  tpwarp:
+    description: Tps to warps.
+    usage: /tpwarp
+    aliases: [tpwarp, tpw]
+  delwarp:
+    description: Delets a given warp.
+    usage: /delwarp
+    aliases: [delwarp, dw]
+  warps:
+    description: Returns all the available warps.
+    usage: /warps
+    aliases: [warps]
